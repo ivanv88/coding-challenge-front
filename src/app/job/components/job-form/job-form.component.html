@@ -1,0 +1,33 @@
+<div class="job-form">
+  <app-text-input
+    label="Title" 
+    placeholder="Title" 
+    [control]="jobForm.controls.title" 
+    [validationErrors]="validationErrors.get('title')"
+  />
+  <app-text-input
+    label="Description"
+    placeholder="Description"
+    [control]="jobForm.controls.description"
+    [validationErrors]="validationErrors.get('description')"
+  />
+  <app-chips-input
+    label="Skills"
+    placeholder="Add new skill"
+    [control]="jobForm.controls.skills"
+    [validationErrors]="validationErrors.get('skills')"
+  />
+  <app-select-input
+    label="Status"
+    placeholder="Status"
+    [control]="jobForm.controls.status"
+    [validationErrors]="validationErrors.get('status')"
+    [options]="statusOptions"
+  />
+  <div class="job-form-submit">
+    <app-primary-button
+      [disabled]="jobForm.invalid || jobForm.pending "
+      (click)="submit()"
+    >SUBMIT</app-primary-button>
+  </div>
+</div>

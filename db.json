@@ -1,0 +1,108 @@
+{
+  "jobs": [
+    {
+      "id": 1,
+      "description": "Test Job Description new",
+      "title": "Test Job Title",
+      "skills": [
+        "skill1",
+        "skill2",
+        "skill66"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": 2,
+      "description": "Test Job Description 2",
+      "title": "Test Job Title 2",
+      "skills": [
+        "skill1",
+        "skill2",
+        "skill3"
+      ],
+      "status": "archived"
+    },
+    {
+      "id": 3,
+      "title": "Test Job Title 3",
+      "description": "Test Job Description 3",
+      "skills": [
+        "skill1",
+        "skill2",
+        "skill3"
+      ],
+      "status": "archived"
+    },
+    {
+      "id": 4,
+      "title": "Test Job Title 3",
+      "description": "Test Job Description 3",
+      "skills": [
+        "skill1",
+        "skill2",
+        "skill3"
+      ],
+      "status": "archived"
+    },
+    {
+      "id": 5,
+      "title": "Test Job Title 4",
+      "description": "Test Job Description 3",
+      "skills": [
+        "skill1",
+        "skill2",
+        "skill3"
+      ],
+      "status": "archived"
+    },
+    {
+      "id": 6,
+      "title": "Test Job Title 5",
+      "description": "Test Job Description 5",
+      "skills": [
+        "skill1",
+        "skill2",
+        "skill3"
+      ],
+      "status": "draft"
+    },
+    {
+      "description": "description",
+      "title": "new title",
+      "skills": [
+        "skill"
+      ],
+      "status": "published",
+      "id": 7
+    },
+    {
+      "id": 8,
+      "description": "Description",
+      "title": "MyNewJob",
+      "skills": [
+        "AFK"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": 9,
+      "description": "TestRedirectEffect",
+      "title": "TestRedirect",
+      "skills": [
+        "skill99"
+      ],
+      "status": "draft"
+    },
+    {
+      "id": 10,
+      "description": "Job Description",
+      "title": "Job Title",
+      "skills": [
+        "java",
+        "angular",
+        "html"
+      ],
+      "status": "draft"
+    }
+  ]
+}

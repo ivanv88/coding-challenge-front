@@ -1,0 +1,9 @@
+.job-form {
+  width: 90%;
+  margin: 0 auto;
+  &-submit {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

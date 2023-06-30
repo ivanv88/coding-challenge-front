@@ -1,0 +1,21 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+$primary: mat.define-palette(mat.$deep-purple-palette);
+$accent: mat.define-palette(mat.$amber-palette);
+$warn: mat.define-palette(mat.$red-palette);
+
+$theme: mat.define-light-theme((
+  color: (primary: $primary, accent: $accent, warn: $warn),
+));
+
+$color-config:    mat.get-color-config($theme);
+$primary-palette: map.get($color-config, 'primary');
+$accent-palette:  map.get($color-config, 'accent');
+$warn-palette:    map.get($color-config, 'warn');
+$success-palette: map.get($color-config, 'success');
+$is-dark-theme:   map.get($color-config, 'is-dark');
+
+$primaryColor:    mat.get-color-from-palette($primary-palette, 500);
+$accentColor:     mat.get-color-from-palette($accent-palette, 500);
+$warnColor:       mat.get-color-from-palette($warn-palette, 500);

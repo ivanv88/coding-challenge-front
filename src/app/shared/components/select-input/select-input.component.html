@@ -1,0 +1,11 @@
+<mat-form-field class="input-field">
+  <mat-label>{{ label }}</mat-label>
+  <mat-select [formControl]="control" [compareWith]="compareFunction">
+    <mat-option *ngFor="let option of options" [value]="option">
+      {{ option | titlecase }}
+    </mat-option>
+  </mat-select>
+  <mat-error *ngIf="control.errors && validationErrors">
+    {{ control.errors | controlError: validationErrors }}
+  </mat-error>
+</mat-form-field>

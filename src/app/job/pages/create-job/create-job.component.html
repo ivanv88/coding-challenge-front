@@ -1,0 +1,7 @@
+<h1>Create New Job Ad</h1>
+<app-job-form
+  [jobForm]="jobForm"
+  [validationErrors]="validationErrors"
+  [statusOptions]="allowedStatusOptions"
+  (formSubmit)="handleSubmit($event)"
+/>

@@ -1,0 +1,24 @@
+<div class="filters">
+  <app-card title="Filter Job Ads">
+    <div class="container filters-container">
+      <div class="row">
+        <div class="col">
+          <app-text-input
+            label="Search Job Ads by Title"
+            placeholder="Enter title"
+            prefixIcon="search"
+            [control]="$any(filtersForm.controls['title'])"
+          />
+        </div>
+        <div class="col">
+          <app-select-input
+            label="Filter Job Ads by Status"
+            placeholder="Select status"
+            [control]="$any(filtersForm.controls['status'])"
+            [options]="statusOptions"
+          />
+        </div>
+      </div>
+    </div>
+  </app-card>
+</div>

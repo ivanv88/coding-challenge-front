@@ -1,0 +1,7 @@
+<mat-paginator
+  [length]="count"
+  [pageSize]="defaultLimit"
+  [pageIndex]="defaultPage ? defaultPage - 1 : 0"
+  [pageSizeOptions]="[5, 10, 25, 100]"
+  (page)="pageChange($event)"
+/>

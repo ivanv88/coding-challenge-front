@@ -1,0 +1,22 @@
+<mat-form-field class="chip-list">
+  <mat-label>{{ label }}</mat-label>
+  <mat-chip-grid #chipGrid [errorStateMatcher]="errorStateMatcher">
+    <mat-chip-row *ngFor="let value of values"
+      [editable]="true"
+      (removed)="remove(value)"
+      (edited)="edit(value, $event)">
+      {{ value }}
+      <button matChipRemove>
+        <mat-icon>cancel</mat-icon>
+      </button>
+    </mat-chip-row>
+    <input [placeholder]="placeholder"
+           [matChipInputFor]="chipGrid"
+           [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+           [matChipInputAddOnBlur]="addOnBlur"
+           (matChipInputTokenEnd)="add($event)"/>
+  </mat-chip-grid>
+  <mat-error *ngIf="control.errors && validationErrors">
+    {{ control.errors | controlError: validationErrors }}
+  </mat-error>
+</mat-form-field>

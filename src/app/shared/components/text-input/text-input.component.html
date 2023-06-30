@@ -1,0 +1,8 @@
+<mat-form-field class="text-input">
+  <mat-label>{{ label }}</mat-label>
+  <input matInput [placeholder]="placeholder" [formControl]="control">
+  <mat-icon *ngIf="prefixIcon" matPrefix>{{ prefixIcon }}</mat-icon>
+  <mat-error *ngIf="control.errors && validationErrors">
+    {{ control.errors | controlError: validationErrors }}
+  </mat-error>
+</mat-form-field>

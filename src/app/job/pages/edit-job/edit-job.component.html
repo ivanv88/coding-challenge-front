@@ -1,0 +1,13 @@
+<h1>Edit Job Ad</h1>
+<ng-container *ngrxLet="selectedJob$ as selectedJob">
+  <app-job-form
+    [selectedJob]="selectedJob"
+    [jobForm]="jobForm"
+    [validationErrors]="validationErrors"
+    [statusOptions]="statusOptions"
+    (formSubmit)="updateJob($event)"
+  />
+</ng-container>
+<ng-template>
+  <div class="Loading">Loading...</div>
+</ng-template>

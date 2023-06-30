@@ -1,0 +1,21 @@
+<h1>Browse Job Ads</h1>
+<app-job-list-filters
+  [status]="pagination.filter?.status"
+  [title]="pagination.filter?.title"
+  (filtersChange)="setFilters($event.title, $event.status)"
+/>
+<ng-container *ngrxLet="jobList$ as jobList">
+  <app-job-card
+    *ngFor="let job of jobList; trackBy: trackBy"
+    [title]="job.title"
+    [job]="job"
+    (editJob)="editJob(job.id)"
+    (statusUpdated)="updateJobStatus($event, job.id)"
+  />
+</ng-container>
+<app-paginator
+  [count]="jobsCount$ | async" 
+  [defaultLimit]="pagination.limit"
+  [defaultPage]="pagination.page"
+  (paginationChange)="setPagination($event.page, $event.limit)"
+/>

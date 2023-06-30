@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" class="header mat-elevation-z4">
+  <div class="container">
+    <div class="header-content">
+      <div class="header-logo">
+        <mat-icon *ngIf="logo">{{ logo }}</mat-icon>
+        <span>{{ title }}</span>
+        <a *ngIf="actionButton" mat-fab extended class="header-fab" [routerLink]="actionButton.route">
+          <mat-icon>{{ actionButton.icon }}</mat-icon>
+          <span class="header-fab-label">
+            {{ actionButton.label }}
+          </span>
+        </a>
+      </div>
+      <nav class="nav">
+        <button mat-icon-button class="burger-menu" (click)="navList.classList.toggle('nav-list-open')">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <ul class="nav-list" #navList>
+          <li *ngFor="let item of navItems" class="nav-list-item">
+            <a mat-button [routerLink]="item.route">{{ item.label }}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</mat-toolbar>

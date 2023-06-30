@@ -1,0 +1,12 @@
+<app-card [title]="job.title">
+  <p>
+    {{ job.description }}
+  </p>
+  <app-badge [color]="getBadgeColor(job.status)" top-element>{{ job.status | uppercase }}</app-badge>
+  <app-chip-list [chipList]="job.skills" />
+  <app-job-card-actions
+    [jobStatus]="job.status"
+    (editJob)="editJob.emit()"
+    (statusUpdated)="statusUpdated.emit($event)"
+  />
+</app-card>

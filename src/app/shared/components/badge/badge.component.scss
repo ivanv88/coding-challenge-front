@@ -1,0 +1,24 @@
+@import "/src/style/variables";
+
+:host {
+  .badge {
+    color: #fff;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 5px;
+    pointer-events: none;
+    &.primary {
+      background-color: $primaryColor;
+    }
+    &.accent {
+      background-color: $accentColor;
+    }
+    &.success {
+      background-color: rgb(128, 177, 128);
+    }
+    &.warning {
+      background-color: $warnColor;
+    }
+  }
+}

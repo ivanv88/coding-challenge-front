@@ -1,0 +1,70 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./style/breakpoints";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+// Container styles
+.container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+
+  // Responsive behavior
+  @media (min-width: map-get($breakpoints, sm)) {
+    max-width: 540px;
+  }
+
+  @media (min-width: map-get($breakpoints, md)) {
+    max-width: 720px;
+  }
+
+  @media (min-width: map-get($breakpoints, lg)) {
+    max-width: 960px;
+  }
+
+  @media (min-width: map-get($breakpoints, xl)) {
+    max-width: 1140px;
+  }
+}
+
+// Row styles
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+// Column styles
+.col {
+  padding-left: 15px;
+  padding-right: 15px;
+  flex: 1 0 0%;
+
+  // Responsive behavior
+  @media (min-width: map-get($breakpoints, sm)) {
+    flex-basis: 0;
+    max-width: 100%;
+  }
+
+  @media (min-width: map-get($breakpoints, md)) {
+    flex-basis: 0;
+    max-width: 100%;
+  }
+
+  @media (min-width: map-get($breakpoints, lg)) {
+    flex-basis: 0;
+    max-width: 100%;
+  }
+
+  @media (min-width: map-get($breakpoints, xl)) {
+    flex-basis: 0;
+    max-width: 100%;
+  }
+}
+

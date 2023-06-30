@@ -1,0 +1,9 @@
+.footer {
+  padding: 1rem;
+  &-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+}

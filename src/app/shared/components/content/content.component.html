@@ -1,0 +1,11 @@
+<div class="content mat-app-background">
+  <div>
+    <ng-content select="[header]" />
+    <main class="content-main">
+      <div class="container">
+        <ng-content />
+      </div>
+    </main>
+  </div>
+  <ng-content select="[footer]" />
+</div>

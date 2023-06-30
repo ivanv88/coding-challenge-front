@@ -1,0 +1,77 @@
+@import "/src/style/breakpoints";
+@import "/src/style/variables";
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  @media (max-width: map-get($breakpoints, sm)) {
+    position: relative;
+  }
+  &-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  &-fab {
+    margin-left: 1.5rem;
+    text-transform: capitalize;
+    @media (max-width: map-get($breakpoints, md)) {
+      max-width: 48px;
+      margin-left: 1rem;
+      & > mat-icon {
+        margin-right: -5px;
+      };
+    }
+    &-label {
+      @media (max-width: map-get($breakpoints, md)) {
+        display: none;
+      }
+    }
+  }
+}
+.nav {
+  display: flex;
+  align-items: center;
+  &-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    &-item {
+      display: inline-block;
+      text-align: center;
+      position: relative;
+      margin: 0 0.5rem;
+      & > a {
+        text-transform: uppercase;
+      }
+    }
+    @media (max-width: map-get($breakpoints, sm)) {
+      max-height: 0;
+      overflow: hidden;
+      position: absolute;
+      z-index: 1;
+      bottom: -72px;
+      width: 100%;
+      left: 0;
+      background-color: $primaryColor;
+      &-open {
+        max-height: initial;
+        .nav-list-item {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.burger-menu {
+  @media (min-width: map-get($breakpoints, sm)) {
+    display: none;
+  }
+}
